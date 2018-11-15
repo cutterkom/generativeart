@@ -1,0 +1,15 @@
+Package: generativeart
+Title: Create Generative Art with R
+Version: 1.0
+Authors@R: person("Katharina", "Brunner", email = "mail@katharina-brunner.de", role = c("aut", "cre"))
+Description: Create Generative Art with R by generating first the data 
+    and then plot the data. 
+    Moreover the used formula and the seeds are recorded. 
+    Therefore the images with random numbers can be recreated.
+Depends: R (>= 3.5.1)
+Imports:
+  tidyverse
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
