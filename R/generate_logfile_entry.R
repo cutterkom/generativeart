@@ -10,6 +10,8 @@
 #' @export
 #' @examples
 #' generate_logfile_entry(logfile, formula, seed, file_name)
+#' @importFrom readr write_tsv
+#' @importFrom dplyr bind_rows
 
 generate_logfile_entry <- function(logfile, formula, seed, file_name) {
   logfile_tmp <- data.frame(file_name = file_name,

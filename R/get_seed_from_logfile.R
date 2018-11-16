@@ -7,6 +7,9 @@
 #' @export
 #' @examples
 #' get_seed_from_logfile(0104)
+#' @importFrom magrittr %>%
+#' @importFrom dplyr filter
+#' @importFrom dplyr pull
 
 get_seed_from_logfile <- function(seed_to_recreate) {
   logfile_tmp <- check_logfile_existence()

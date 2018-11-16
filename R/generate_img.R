@@ -14,6 +14,7 @@
 #' @export
 #' @examples
 #' generate_img(formula = my_formula, nr_of_img = 3, polar = FALSE)
+#' @importFrom purrr map
 
 generate_img <- function(formula, nr_of_img, polar = FALSE) {
   seeds <- generate_seeds(nr_of_img)

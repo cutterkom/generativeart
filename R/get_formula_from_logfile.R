@@ -8,6 +8,8 @@
 #' @export
 #' @examples
 #' get_formula_from_logfile(0104)
+#' @importFrom magrittr %>%
+#' @importFrom dplyr filter
 
 # recreate images with formula and seed from logfile
 get_formula_from_logfile <- function(seed_to_recreate) {

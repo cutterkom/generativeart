@@ -9,6 +9,7 @@
 #' @export
 #' @examples
 #' regenerate_img(0104, polar = FALSE)
+#' @importFrom purrr map
 
 regenerate_img <- function(seed_to_recreate, polar = FALSE) {
   formula <- get_formula_from_logfile(seed_to_recreate)

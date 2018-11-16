@@ -9,12 +9,14 @@
 #' @export
 #' @examples
 #' generate_plot(df, file_name, polar = FALSE)
+#' @importFrom ggplot2 ggplot
+#' @importFrom magrittr %>%
 
 generate_plot <- function(df, file_name, polar) {
   print("generate plot")
   if (polar == TRUE) {
     plot <- df %>%
-      ggplot(aes(x = x, y = y)) +
+      ggplot2::ggplot(aes(x = x, y = y)) +
       geom_point(alpha = 0.1, size = 0, shape = 20) +
       theme_void() +
       coord_fixed() +
