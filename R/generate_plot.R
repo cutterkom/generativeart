@@ -9,7 +9,7 @@
 #' @export
 #' @examples
 #' generate_plot(df, file_name, polar = FALSE)
-#' @importFrom ggplot2 ggplot
+#' @import ggplot2
 #' @importFrom magrittr %>%
 
 generate_plot <- function(df, file_name, polar) {
@@ -17,17 +17,17 @@ generate_plot <- function(df, file_name, polar) {
   if (polar == TRUE) {
     plot <- df %>%
       ggplot2::ggplot(aes(x = x, y = y)) +
-      geom_point(alpha = 0.1, size = 0, shape = 20) +
-      theme_void() +
-      coord_fixed() +
-      coord_polar()
+      ggplot2::geom_point(alpha = 0.1, size = 0, shape = 20) +
+      ggplot2::theme_void() +
+      ggplot2::coord_fixed() +
+      ggplot2::coord_polar()
   } else {
     plot <- df %>%
-      ggplot(aes(x = x, y = y)) +
-      geom_point(alpha = 0.1, size = 0, shape = 20) +
-      theme_void() +
-      coord_fixed()
+      ggplot2::ggplot(aes(x = x, y = y)) +
+      ggplot2::geom_point(alpha = 0.1, size = 0, shape = 20) +
+      ggplot2::theme_void() +
+      ggplot2::coord_fixed()
   }
-  ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6)
+  ggplot2::ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6)
   print("image saved...")
 }
