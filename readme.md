@@ -47,8 +47,8 @@ generativeart::setup_directories(IMG_DIR, IMG_SUBDIR, IMG_SUBDIR2, LOGFILE_DIR)
 
 # include a specific formula, for example:
 my_formula <- list(
-  x = quote(x_i^sample(1:4, 1) + sin(y_i^sample(1:4, 1))),
-  y = quote(y_i^sample(1:4, 1) + sin(x_i^sample(1:4, 1)))
+  x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
+  y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
 )
 
 # call the main function to create five images with a polar coordinate system
