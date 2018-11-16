@@ -2,7 +2,7 @@
 
 Create Generative Art with R.
 
-![](img/generativeart.jpg)
+![](img/generativeart.png)
 
 [More on Instagram](https://www.instagram.com/cutterkom/)
 
@@ -56,44 +56,41 @@ generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE)
 
 ```
 
-* You define you many images you want to create `nr_of_img`.
+* You can create as many images as you want by setting `nr_of_img`.
 * For every image a seed is drawn from a number between 1 and 10000.
 * This seed determines the random numbers in the formula.
-* You can choose between are cartesian and a polar coordinate system by setting `polar = TRUE` or `polar = FALSE`
+* You can choose between cartesian and polar coordinate systems by setting `polar = TRUE` or `polar = FALSE`
 * the formula is a `list()`
 
 ## Examples
 
-It is a good idea to use the sine and cosine in the formula, since it garantues nice shapes, especially when combined with a polar coordinate system. One simple example:
+It is a good idea to use the sine and cosine in the formula, since it guarantees nice shapes, especially when combined with a polar coordinate system. One simple example:
 
 ```
 my_formula <- list(
-  x = quote(x_i^sample(1:4, 1) + sin(y_i^sample(1:4, 1))),
-  y = quote(y_i^sample(1:4, 1) + sin(x_i^sample(1:4, 1)))
+  x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
+  y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
 )
 
 generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE)
 
 ```
 
-Two of the resulting images:
+Two possible images:
 
-`seed = 7602`:
-![](img/2018-11-08-21-59_seed_7602.png)
+`seed = 1821`, `polar = TRUE`:
+![](img/2018-11-16-17-13_seed_1821.png)
 
-`seed = 2256`:
-![](img/2018-11-08-22-01_seed_2256.png)
-
-`seed = 8762`:
-![](img/2018-11-08-22-01_seed_8762.png)
+`seed = 5451`, `polar = FALSE`:
+![](img/2018-11-16-17-12_seed_5451.png)
 
 The corresponding log file looks like that:
 
-| file_name                      | seed | formula_x                                      | formula_y                                      |
-|--------------------------------|------|------------------------------------------------|------------------------------------------------|
-| 2018-11-08-21-59_seed_7602.png | 7602 | pi_x^sample(2:4, 1) + sin(pi_y^sample(2:4, 1)) | pi_y^sample(2:4, 1) + sin(pi_x^sample(2:4, 1)) |
-| 2018-11-08-22-01_seed_2256.png | 2256 | pi_x^sample(2:4, 1) + sin(pi_y^sample(2:4, 1)) | pi_y^sample(2:4, 1) + sin(pi_x^sample(2:4, 1)) |
-| 2018-11-08-22-01_seed_8762.png | 8762 | pi_x^sample(2:4, 1) + sin(pi_y^sample(2:4, 1)) | pi_y^sample(2:4, 1) + sin(pi_x^sample(2:4, 1)) |
+| file_name                      | seed | formula_x                            | formula_y                            | 
+|--------------------------------|------|--------------------------------------|--------------------------------------| 
+| 2018-11-16-17-13_seed_1821.png | 1821 | runif(1, -1, 1) * x_i^2 - sin(y_i^2) | runif(1, -1, 1) * y_i^3 - cos(x_i^2) | 
+| 2018-11-16-17-12_seed_5451.png | 5451 | runif(1, -1, 1) * x_i^2 - sin(y_i^2) | runif(1, -1, 1) * y_i^3 - cos(x_i^2) | 
+
 
 ## Inspiration
 
