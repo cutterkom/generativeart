@@ -8,7 +8,11 @@ Description: Create Generative Art with R by generating first the data
     Therefore the images with random numbers can be recreated.
 Depends: R (>= 3.4.1)
 Imports:
-  tidyverse
+  ggplot2,
+  magrittr,
+  purrr,
+  dplyr,
+  readr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
