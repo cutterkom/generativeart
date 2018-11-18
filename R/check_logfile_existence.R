@@ -11,7 +11,7 @@
 check_logfile_existence <- function() {
   if (file.exists(LOGFILE_PATH)) {
     print("load logfile")
-    logfile <- readr::read_tsv(LOGFILE_PATH)
+    logfile <- read.csv(LOGFILE_PATH, sep = "\t", stringsAsFactors = F)
   } else {
     print("create logfile")
     logfile <- data.frame(file_name = NA, seed = NA, formula_x = NA, formula_y = NA)

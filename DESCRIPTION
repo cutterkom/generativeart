@@ -11,8 +11,7 @@ Imports:
   ggplot2,
   magrittr,
   purrr,
-  dplyr,
-  readr
+  dplyr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

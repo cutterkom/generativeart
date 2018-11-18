@@ -10,7 +10,6 @@
 #' @export
 #' @examples
 #' generate_logfile_entry(logfile, formula, seed, file_name)
-#' @importFrom readr write_tsv
 #' @importFrom dplyr bind_rows
 
 generate_logfile_entry <- function(logfile, formula, seed, file_name) {
@@ -19,6 +18,6 @@ generate_logfile_entry <- function(logfile, formula, seed, file_name) {
                             formula_x = as.character(formula["x"]),
                             formula_y = as.character(formula["y"]), stringsAsFactors = F)
   logfile <- dplyr::bind_rows(logfile, logfile_tmp)
-  readr::write_tsv(logfile, LOGFILE_PATH)
+  write.table(logfile, LOGFILE_PATH, sep = "\t", quote = F, row.names = F)
   print("logfile saved")
 }
