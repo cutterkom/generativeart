@@ -13,5 +13,5 @@
 
 get_seed_from_logfile <- function(seed_to_recreate) {
   logfile_tmp <- check_logfile_existence()
-  seeds <- logfile_tmp %>% dplyr::filter(seed == seed_to_recreate) %>% dplyr::pull(seed)
+  seeds <- logfile_tmp %>% dplyr::filter(seed == seed_to_recreate) %>% dplyr::pull(seed) %>% unique(.)
 }
