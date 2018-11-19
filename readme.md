@@ -23,7 +23,7 @@ You can install the package with the `devtools` package directly from Github:
 devtools::install_github("cutterkom/generativeart")
 ```
 
-`generativeart` uses the `tidyverse` package.
+`generativeart` uses the packages `ggplot2`, `magrittr`, `purrr` and `dplyr`.
 
 ## Usage
 
