@@ -4,7 +4,7 @@
 \alias{generate_img}
 \title{Generate multiple generative images}
 \usage{
-generate_img(formula, nr_of_img, polar = FALSE)
+generate_img(formula, nr_of_img, polar = FALSE, filetype = "png")
 }
 \arguments{
 \item{formula}{the formula you want to use as a list}
@@ -12,6 +12,8 @@ generate_img(formula, nr_of_img, polar = FALSE)
 \item{nr_of_img}{the number of images that should be created}
 
 \item{polar}{logical should the plot have a polar coordinate system ("polar = TRUE") or a cartesian coordinate system ("polar = FALSE")}
+
+\item{file_name}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `ggsave()`}
 }
 \value{
 as many png files as you net in "nr_of_img"

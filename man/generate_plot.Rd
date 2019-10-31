@@ -4,7 +4,7 @@
 \alias{generate_plot}
 \title{Generate one generative plot}
 \usage{
-generate_plot(df, file_name, polar)
+generate_plot(df, file_name, polar, filetype)
 }
 \arguments{
 \item{df}{the data frame created with `generate_data()`}
@@ -12,6 +12,8 @@ generate_plot(df, file_name, polar)
 \item{file_name}{the file name for saving the plot}
 
 \item{polar}{do you want to use a polar coordinate system? The default is a cartesian coordinate system.}
+
+\item{file_name}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `ggsave()`}
 }
 \value{
 a png file

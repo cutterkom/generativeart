@@ -4,10 +4,12 @@
 \alias{generate_filename}
 \title{Generate filenames}
 \usage{
-generate_filename(seed)
+generate_filename(seed, filetype)
 }
 \arguments{
 \item{seed}{a numeric input generated with create_seeds()}
+
+\item{file_name}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `ggsave()`}
 }
 \value{
 character vector, example: "2018-10-02-20-22_seed_22.png"

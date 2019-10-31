@@ -4,6 +4,7 @@
 #' @param df the data frame created with `generate_data()`
 #' @param file_name the file name for saving the plot
 #' @param polar do you want to use a polar coordinate system? The default is a cartesian coordinate system.
+#' @param file_name filetype of the final image. Default is `png`, for other options see the `devics` argument in `gggplot::gsave()`
 #' @return a png file
 #' @seealso \code{\link{generate_data}} where the data is created
 #' @export
@@ -12,7 +13,7 @@
 #' @import ggplot2
 #' @importFrom magrittr %>%
 
-generate_plot <- function(df, file_name, polar) {
+generate_plot <- function(df, file_name, polar, filetype) {
   print("generate plot")
   if (polar == TRUE) {
     plot <- df %>%
@@ -28,6 +29,6 @@ generate_plot <- function(df, file_name, polar) {
       ggplot2::theme_void() +
       ggplot2::coord_fixed()
   }
-  ggplot2::ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6)
+  ggplot2::ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6, device = filetype)
   print("image saved...")
 }

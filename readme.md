@@ -11,7 +11,9 @@ Create Generative Art with R.
 > One overly simple but useful definition is that generative art is art programmed using a computer that intentionally introduces randomness as part of its creation process.
 -- [Why Love Generative Art? - Artnome](https://www.artnome.com/news/2018/8/8/why-love-generative-art)
 
-The `R` package `generativeart` let's you create images based on many thousand points. The position of every single point is calculated by a formula, which has random parameters. Because of the random numbers, every image looks different.
+The `R` package `generativeart` let's you create images based on many thousand points.
+The position of every single point is calculated by a formula, which has random parameters.
+Because of the random numbers, every image looks different.
 
 In order to make an image reproducible, `generative art` implements a log file that saves the `file_name`, the `seed` and the `formula`.
 
@@ -27,7 +29,10 @@ devtools::install_github("cutterkom/generativeart")
 
 ## Usage
 
-The package works with a specific directory structure that fits my needs best. The first step is to create it with `setup_directories()`. All images are saved by default in `img/everything/`. I use `img/handpicked/` to choose the best ones. In `logfile/` you will find a `csv` file that saves the `file_name`, the `seed` and the used `formula`.
+The package works with a specific directory structure that fits my needs best.
+The first step is to create it with `setup_directories()`.
+All images are saved by default in `img/everything/`. I use `img/handpicked/` to choose the best ones.
+In `logfile/` you will find a `csv` file that saves the `file_name`, the `seed` and the used `formula`.
 
 ```
 library(generativeart)
@@ -52,7 +57,7 @@ my_formula <- list(
 )
 
 # call the main function to create five images with a polar coordinate system
-generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE)
+generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE, filetype = "png")
 
 ```
 
@@ -60,6 +65,8 @@ generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE)
 * For every image a seed is drawn from a number between 1 and 10000.
 * This seed determines the random numbers in the formula.
 * You can choose between cartesian and polar coordinate systems by setting `polar = TRUE` or `polar = FALSE`
+* You can save the output image in various formats.
+Default is `png`, the alternatives are defined by the `device` options of [`ggplot::ggsave()`](https://ggplot2.tidyverse.org/reference/ggsave.html).
 * the formula is a `list()`
 
 ## Examples
