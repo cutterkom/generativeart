@@ -21,7 +21,7 @@ In order to make an image reproducible, `generative art` implements a log file t
 
 You can install the package with the `devtools` package directly from Github:
 
-```
+```r
 devtools::install_github("cutterkom/generativeart")
 ```
 
@@ -34,7 +34,7 @@ The first step is to create it with `setup_directories()`.
 All images are saved by default in `img/everything/`. I use `img/handpicked/` to choose the best ones.
 In `logfile/` you will find a `csv` file that saves the `file_name`, the `seed` and the used `formula`.
 
-```
+```r
 library(generativeart)
 
 # set the paths
@@ -73,7 +73,7 @@ Default is `png`, the alternatives are defined by the `device` options of [`ggpl
 
 It is a good idea to use the sine and cosine in the formula, since it guarantees nice shapes, especially when combined with a polar coordinate system. One simple example:
 
-```
+```r
 my_formula <- list(
   x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
   y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
