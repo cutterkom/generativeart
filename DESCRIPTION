@@ -6,10 +6,12 @@ Description: Create Generative Art with R by generating first the data
     and then plot the data.
     Moreover the used formula and the seeds are recorded.
     Therefore the images with random numbers can be recreated.
-Depends: R (>= 3.4.1)
+Depends:
+  R (>= 3.4.1),
+  magrittr,
+  ggplot2
 Imports:
   ggplot2,
-  magrittr,
   purrr,
   dplyr
 License: GPL-3
