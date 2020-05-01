@@ -57,7 +57,7 @@ my_formula <- list(
 )
 
 # call the main function to create five images with a polar coordinate system
-generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE, filetype = "png")
+generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE, filetype = "png", color = "black", background_color = "white")
 
 ```
 
@@ -65,6 +65,7 @@ generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE, f
 * For every image a seed is drawn from a number between 1 and 10000.
 * This seed determines the random numbers in the formula.
 * You can choose between cartesian and polar coordinate systems by setting `polar = TRUE` or `polar = FALSE`
+* You can choose the colors with `color = 'black'` and `background_color = 'hotpink'`
 * You can save the output image in various formats.
 Default is `png`, the alternatives are defined by the `device` options of [`ggplot::ggsave()`](https://ggplot2.tidyverse.org/reference/ggsave.html).
 * the formula is a `list()`
@@ -79,7 +80,7 @@ my_formula <- list(
   y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
 )
 
-generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE)
+generativeart::generate_img(formula = my_formula, nr_of_img = 5, polar = TRUE, color = "black", background_color = "white")
 
 ```
 
