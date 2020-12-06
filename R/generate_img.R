@@ -4,8 +4,8 @@
 #' @param formula the formula you want to use as a list
 #' @param polar logical should the plot have a polar coordinate system ("polar = TRUE") or a cartesian coordinate system ("polar = FALSE")
 #' @param nr_of_img the number of images that should be created
-#' @param file_name filetype of the final image. Default is `png`, for other options see the `devics` argument in `gggplot::gsave()`
 #' @param ... further arguments like color and background_color
+#' @param filetype filetype of the final image. Default is `png`, for other options see the `devics` argument in `gggplot::gsave()`
 #' @return as many png files as you net in "nr_of_img"
 #' @seealso \code{\link{generate_seeds}} generate the seeds for the randomness
 #' @seealso \code{\link{generate_filename}} generate the file names

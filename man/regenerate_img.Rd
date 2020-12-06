@@ -4,10 +4,12 @@
 \alias{regenerate_img}
 \title{Recreate an image}
 \usage{
-regenerate_img(seed_to_recreate, polar = FALSE)
+regenerate_img(seed_to_recreate, filetype, polar = FALSE)
 }
 \arguments{
 \item{seed_to_recreate}{the seed of the original image that either put in as a numeric value or vector from "get_seed_from_logfile()"}
+
+\item{filetype}{set the file type for the image}
 
 \item{polar}{logical should the plot have a polar coordinate system ("polar = TRUE") or a cartesian coordinate system ("polar = FALSE")}
 }

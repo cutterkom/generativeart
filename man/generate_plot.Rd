@@ -4,16 +4,27 @@
 \alias{generate_plot}
 \title{Generate one generative plot}
 \usage{
-generate_plot(df, file_name, polar, filetype)
+generate_plot(
+  df,
+  file_name,
+  polar,
+  filetype,
+  color = "black",
+  background_color = "white"
+)
 }
 \arguments{
 \item{df}{the data frame created with `generate_data()`}
 
-\item{file_name}{the file name for saving the plot}
+\item{file_name}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `gggplot::gsave()`}
 
 \item{polar}{do you want to use a polar coordinate system? The default is a cartesian coordinate system.}
 
-\item{file_name}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `ggsave()`}
+\item{filetype}{set the file type for the image}
+
+\item{color}{color of the points. default is black}
+
+\item{background_color}{background color of the plaut. default is white.}
 }
 \value{
 a png file

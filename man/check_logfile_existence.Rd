@@ -6,9 +6,6 @@
 \usage{
 check_logfile_existence()
 }
-\arguments{
-\item{file_name}{the file name for saving the plot}
-}
 \value{
 a data frame
 }
@@ -16,7 +13,9 @@ a data frame
 This function loads the logfile, if it exists. If it doesn't, it will create one.
 }
 \examples{
+\dontrun{
 check_logfile_existence()
+}
 }
 \seealso{
 \code{\link{generate_logfile_entry}} get the data to be logged

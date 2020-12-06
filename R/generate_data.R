@@ -6,7 +6,9 @@
 #' @seealso \code{\link{generate_plot}} the returned data frame is the input to generate the plot
 #' @export
 #' @examples
+#' \dontrun{
 #' generate_data(formula)
+#' }
 #' # an example for a formula:
 #' formula <- list(
 #'   x = quote(runif(1, -1, 1) * pi_x^2 -sin(pi_y^2)),

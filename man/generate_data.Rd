@@ -16,7 +16,9 @@ data frame
 The generative images are based on values in a dataframe. This function creates the data by transforming the base values `seq(-pi, pi)` with a `formula`.
 }
 \examples{
+\dontrun{
 generate_data(formula)
+}
 # an example for a formula:
 formula <- list(
   x = quote(runif(1, -1, 1) * pi_x^2 -sin(pi_y^2)),

@@ -4,10 +4,12 @@
 \alias{get_formula_from_logfile}
 \title{Get a formula from the logfile}
 \usage{
-get_formula_from_logfile(seed_to_recreate)
+get_formula_from_logfile(seed_to_recreate, filetype)
 }
 \arguments{
 \item{seed_to_recreate}{the seed of the original image that either put in as a numeric value or vector from "get_seed_from_logfile()"}
+
+\item{filetype}{set the file type for the image}
 }
 \value{
 a list containing the formula

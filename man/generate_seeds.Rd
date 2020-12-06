@@ -13,7 +13,7 @@ generate_seeds(nr_of_img)
 numeric vector
 }
 \description{
-This function creates a vector of random numbers between 1 and 1000 that are used to set the seed. Since every images needs its own seed, the number of images you want to create equals the number of seeds.
+This function creates a vector of random numbers between 1 and 10000 that are used to set the seed. Since every images needs its own seed, the number of images you want to create equals the number of seeds.
 }
 \examples{
 generate_seeds(3) #creates the seeds for three images

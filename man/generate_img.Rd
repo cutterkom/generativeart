@@ -4,7 +4,7 @@
 \alias{generate_img}
 \title{Generate multiple generative images}
 \usage{
-generate_img(formula, nr_of_img, polar = FALSE, filetype = "png")
+generate_img(formula, nr_of_img, polar = FALSE, filetype = "png", ...)
 }
 \arguments{
 \item{formula}{the formula you want to use as a list}
@@ -13,7 +13,9 @@ generate_img(formula, nr_of_img, polar = FALSE, filetype = "png")
 
 \item{polar}{logical should the plot have a polar coordinate system ("polar = TRUE") or a cartesian coordinate system ("polar = FALSE")}
 
-\item{file_name}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `ggsave()`}
+\item{filetype}{filetype of the final image. Default is `png`, for other options see the `devics` argument in `gggplot::gsave()`}
+
+\item{...}{further arguments like color and background_color}
 }
 \value{
 as many png files as you net in "nr_of_img"
@@ -23,6 +25,7 @@ This is the main function of the package generativeimgR. It calls all the other 
 }
 \examples{
 generate_img(formula = my_formula, nr_of_img = 3, polar = FALSE)
+generate_img(formula = my_formula, nr_of_img = 3, polar = FALSE, color = "#101820", background_color = "#F2AA4C")
 }
 \seealso{
 \code{\link{generate_seeds}} generate the seeds for the randomness

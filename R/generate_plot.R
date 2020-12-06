@@ -7,6 +7,7 @@
 #' @param file_name filetype of the final image. Default is `png`, for other options see the `devics` argument in `gggplot::gsave()`
 #' @param color color of the points. default is black
 #' @param background_color background color of the plaut. default is white.
+#' @param filetype set the file type for the image
 #' @return a png file
 #' @seealso \code{\link{generate_data}} where the data is created
 #' @export
