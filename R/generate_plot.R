@@ -8,6 +8,9 @@
 #' @param color color of the points. default is black
 #' @param background_color background color of the plaut. default is white.
 #' @param filetype set the file type for the image
+#' @param width width of image output in inches
+#' @param height height of image output in inches
+#' @param dpi dots per inch
 #' @return a png file
 #' @seealso \code{\link{generate_data}} where the data is created
 #' @export
@@ -16,7 +19,7 @@
 #' @import ggplot2
 #' @importFrom magrittr %>%
 
-generate_plot <- function(df, file_name, polar, filetype, color = "black", background_color = "white") {
+generate_plot <- function(df, file_name, polar, filetype, color = "black", background_color = "white", width, height, dpi) {
   print("generate plot")
   if (polar == TRUE) {
     plot <- df %>%
@@ -40,6 +43,12 @@ generate_plot <- function(df, file_name, polar, filetype, color = "black", backg
         plot.background = element_rect(fill = background_color)
         )
   }
-  ggplot2::ggsave(plot, filename = paste0(IMG_PATH, file_name), width = 6, height = 6, device = filetype)
+  ggplot2::ggsave(
+    plot,
+    filename = paste0(IMG_PATH, file_name),
+    width = width %||% 12,
+    height = height %||% 12,
+    dpi = dpi %||% 600,
+    device = filetype)
   print("image saved...")
 }

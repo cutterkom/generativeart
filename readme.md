@@ -6,6 +6,8 @@ Create Generative Art with R.
 
 [More on Instagram](https://www.instagram.com/cutterkom/)
 
+**Note from JT 2020-12-13:** I've modified the `generate_plot()` function to allow the width, height, and resolution of image outputs to be customised.
+
 ## Description
 
 > One overly simple but useful definition is that generative art is art programmed using a computer that intentionally introduces randomness as part of its creation process.
