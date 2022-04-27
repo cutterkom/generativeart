@@ -1,5 +1,15 @@
 # generativeart
 
+## Announcement
+
+This package collects more and more stars here on Github and is widely used for NFTs. Just search on these platforms, they are everywhere. 
+
+I would like to clarify: I am **not** a fan of all Blockchain, NFT and Web3 related topics. 
+
+Why? Read this text ["The Third Web"](https://tante.cc/2021/12/17/the-third-web/). 
+
+--- 
+
 Create Generative Art with R.
 
 ![](img/generativeart.png)
