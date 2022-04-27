@@ -2,11 +2,11 @@
 
 ## Announcement
 
-This package collects more and more stars here on Github and is widely used for NFTs. Just browse on NFT platforms - it won't take you long to discover these patterns.
+This package collects more and more stars here on Github and is widely used for NFTs. Just browse on NFT platforms - it won't take you long to discover  patterns be that might be decandents of this repository.
 
-I would like to clarify: I am **not** a fan of all Blockchain, NFT and Web3 related topics. 
+I would like to clarify: I am **not a fan** of Blockchain, NFT and Web3. 
 
-Why? Read this text ["The Third Web"](https://tante.cc/2021/12/17/the-third-web/). 
+Why? Read this text: ["The Third Web"](https://tante.cc/2021/12/17/the-third-web/) by [@tante](https://twitter.com/tante).
 
 --- 
 
