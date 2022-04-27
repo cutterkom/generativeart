@@ -2,7 +2,7 @@
 
 ## Announcement
 
-This package collects more and more stars here on Github and is widely used for NFTs. Just search on these platforms, they are everywhere. 
+This package collects more and more stars here on Github and is widely used for NFTs. Just browse on NFT platforms - it won't take you long to discover these patterns.
 
 I would like to clarify: I am **not** a fan of all Blockchain, NFT and Web3 related topics. 
 
